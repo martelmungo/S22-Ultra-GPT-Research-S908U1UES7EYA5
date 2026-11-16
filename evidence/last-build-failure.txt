@@ -1,0 +1,73 @@
+FAILED: <OUT_DIR>/target/product/generic_arm64/obj/ETC/build-manifest_intermediates/build-manifest.xml
+/bin/bash -c "(mkdir -p <OUT_DIR>/target/product/generic_arm64/obj/ETC/build-manifest_intermediates/ ) && (python3 .repo/repo/repo manifest -o - -r | grep -Ev \"proprietary_\" > <OUT_DIR>/target/product/generic_arm64/obj/ETC/build-manifest_intermediates/build-manifest.xml )"
+Traceback (most recent call last):
+  File "<SOURCE_ROOT>/.repo/repo/git_config.py", line 269, in GetString
+    v = self._cache[_key(name)]
+        ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'repo.worktree'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<SOURCE_ROOT>/.repo/repo/git_config.py", line 437, in _SaveJson
+    with open(self._json, "w") as fd:
+         ^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '<BUILD_USER_HOME>/.repo_.gitconfig.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<SOURCE_ROOT>/.repo/repo/main.py", line 963, in <module>
+    _Main(sys.argv[1:])
+  File "<SOURCE_ROOT>/.repo/repo/main.py", line 939, in _Main
+    result = repo._Run(name, gopts, argv) or 0
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/main.py", line 287, in _Run
+    result = run()
+             ^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/main.py", line 268, in <lambda>
+    lambda: self._RunLong(name, gopts, argv, git_trace2_event_log) or 0
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/main.py", line 391, in _RunLong
+    outer_client = RepoClient(self.repodir)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/manifest_xml.py", line 2419, in __init__
+    super().__init__(
+  File "<SOURCE_ROOT>/.repo/repo/manifest_xml.py", line 462, in __init__
+    if os.path.exists(mp.gitdir) and mp.use_worktree:
+                                     ^^^^^^^^^^^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/project.py", line 5618, in use_worktree
+    return self.config.GetBoolean("repo.worktree")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/git_config.py", line 237, in GetBoolean
+    v = self.GetString(name)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/git_config.py", line 272, in GetString
+    return self.defaults.GetString(name, all_keys=all_keys)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/git_config.py", line 269, in GetString
+    v = self._cache[_key(name)]
+        ^^^^^^^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/git_config.py", line 410, in _cache
+    self._cache_dict = self._Read()
+                       ^^^^^^^^^^^^
+  File "<SOURCE_ROOT>/.repo/repo/git_config.py", line 417, in _Read
+    self._SaveJson(d)
+  File "<SOURCE_ROOT>/.repo/repo/git_config.py", line 440, in _SaveJson
+    platform_utils.remove(self._json, missing_ok=True)
+  File "<SOURCE_ROOT>/.repo/repo/platform_utils.py", line 150, in remove
+    os.remove(longpath)
+OSError: [Errno 30] Read-only file system: '<BUILD_USER_HOME>/.repo_.gitconfig.json'
+\nWrite to a read-only file system detected. Possible fixes include
+1. Generate file directly to out/ which is ReadWrite, #recommend solution
+2. BUILD_BROKEN_SRC_DIR_RW_ALLOWLIST := <my/path/1> <my/path/2> #discouraged, subset of source tree will be RW
+3. BUILD_BROKEN_SRC_DIR_IS_WRITABLE := true #highly discouraged, entire source tree will be RW
+[ 90% 136776/151184] Install: <OUT_DIR>/target/product/generic_arm64/apex/com.android.vndk.v30/lib/android.hardware.radio@1.2.so
+[ 90% 136777/151184] Install: <OUT_DIR>/target/product/generic_arm64/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.3.so
+[ 90% 136778/151184] Install: <OUT_DIR>/target/product/generic_arm64/apex/com.android.vndk.v30/lib/android.hardware.radio@1.3.so
+[ 90% 136779/151184] build <OUT_DIR>/target/product/generic_arm64/obj/NOTICE.xml.gz
+[ 90% 136780/151184] Building bootanimation.zip
+ninja: build stopped: subcommand failed.
+21:09:45 ninja failed with: exit status 1
+
+#### failed to build some targets (02:03:37 (hh:mm:ss)) ####

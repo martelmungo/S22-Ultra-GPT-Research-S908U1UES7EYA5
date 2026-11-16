@@ -1,0 +1,169 @@
+[
+  {
+    "id": "C01",
+    "claim": "Normal EYA5 AVB recognizes matching DeviceInfo UserKey",
+    "classification": "confirmed_code_conditional_capability",
+    "sources": [
+      "S05",
+      "S06"
+    ],
+    "limit": "Authorized enrollment, actual device contents and installation remain unknown."
+  },
+  {
+    "id": "C02",
+    "claim": "Ordinary Download Mode eligibility gate is constant false in reviewed U1 code",
+    "classification": "confirmed_code",
+    "sources": [
+      "S11",
+      "S28",
+      "S29"
+    ],
+    "limit": "Not proof that every alternative authenticated route is absent."
+  },
+  {
+    "id": "C03",
+    "claim": "VerifiedBootDxe selects Keymaster/RPMB or GPT devinfo backend",
+    "classification": "confirmed_code_runtime_unknown",
+    "sources": [
+      "S07",
+      "S08"
+    ],
+    "limit": "Actual runtime backend and secure record authorization unknown."
+  },
+  {
+    "id": "C04",
+    "claim": "Authenticated Engineering Mode mode3 can request ordinary state change",
+    "classification": "confirmed_code_conditional_capability",
+    "sources": [
+      "S11",
+      "S12"
+    ],
+    "limit": "Production issuance, acceptance, persistence and fresh boot unproved."
+  },
+  {
+    "id": "C05",
+    "claim": "Keymaster image and command dispatcher not identified",
+    "classification": "unresolved",
+    "sources": [
+      "S08",
+      "S09"
+    ],
+    "limit": "Missing runtime mapping/provider/payload and secure handler."
+  },
+  {
+    "id": "C06",
+    "claim": "Generic XBL auth interface is not linked to actual ABL transaction",
+    "classification": "unresolved",
+    "sources": [
+      "S13"
+    ],
+    "limit": "Missing context identity and ABL caller/result/handoff."
+  },
+  {
+    "id": "C07",
+    "claim": "DXC3 MBN positive control verifies; tested EYA5/EYB1 constructions do not",
+    "classification": "reproduced_offline_unresolved_contract",
+    "sources": [
+      "S15"
+    ],
+    "limit": "Not proof of invalid production images or U1 trust."
+  },
+  {
+    "id": "C08",
+    "claim": "Two OTA certificates contain one key distinct from compared APK/AVB/EngMode keys",
+    "classification": "confirmed_public_material_identity",
+    "sources": [
+      "S16"
+    ],
+    "limit": "No private-key recovery or authorization bridge."
+  },
+  {
+    "id": "C09",
+    "claim": "Android update request reaches independent recovery package authentication",
+    "classification": "confirmed_static_chain",
+    "sources": [
+      "S24",
+      "S25",
+      "S27"
+    ],
+    "limit": "Actual applicable updater/partition writer missing."
+  },
+  {
+    "id": "C10",
+    "claim": "Odin independent auth/destination-name mismatch not found in reviewed worker",
+    "classification": "refuted_within_scope",
+    "sources": [
+      "S19",
+      "S20"
+    ],
+    "limit": "No accepted arbitrary write established."
+  },
+  {
+    "id": "C11",
+    "claim": "LinuxLoader AVB allocation/header concern remains Level1",
+    "classification": "level_1_unresolved",
+    "sources": [
+      "S17",
+      "S18"
+    ],
+    "limit": "No reachable harmful short authenticated input demonstrated."
+  },
+  {
+    "id": "C12",
+    "claim": "Generic target passed Kati and compiled ARM64 toybox",
+    "classification": "observed_build_success",
+    "sources": [
+      "S01",
+      "S02"
+    ],
+    "limit": "Not full b0quew compilation or image/phone success."
+  },
+  {
+    "id": "C13",
+    "claim": "Generic systemimage build later failed at repo manifest cache write",
+    "classification": "observed_failure",
+    "sources": [
+      "CLOSEOUT"
+    ],
+    "limit": "Direct exit1; stopped WSL; final image not verified."
+  },
+  {
+    "id": "C14",
+    "claim": "Combined Lineage/EYA5 policy has two genfscon conflicts",
+    "classification": "reproduced_offline_compatibility_failure",
+    "sources": [
+      "S03"
+    ],
+    "limit": "All-stock control has separate neverallow failures; no firmware vulnerability claim."
+  },
+  {
+    "id": "C15",
+    "claim": "EYA5 init implements GSI skip-mount mechanism after successful system mount",
+    "classification": "confirmed_original_instructions_conditional",
+    "sources": [
+      "S04"
+    ],
+    "limit": "No AVB bypass or hardware boot observation."
+  },
+  {
+    "id": "C16",
+    "claim": "No owner-accessible complete custom-OS route demonstrated",
+    "classification": "project_outcome",
+    "sources": [
+      "S01",
+      "S06",
+      "S13",
+      "S27"
+    ],
+    "limit": "This is not a proof of universal impossibility."
+  },
+  {
+    "id": "C17",
+    "claim": "No ML model training or evaluation was performed",
+    "classification": "project_scope",
+    "sources": [
+      "CLOSEOUT"
+    ],
+    "limit": "Prospective retrieval/evaluation methods are proposals, not measured results."
+  }
+]

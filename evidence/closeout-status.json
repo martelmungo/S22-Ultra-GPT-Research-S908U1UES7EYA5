@@ -1,0 +1,34 @@
+{
+  "project_state": "paused_at_owner_request",
+  "closeout_date": "2026-11-15",
+  "observed_utc": "2026-11-15T18:03:32.185658+00:00",
+  "target": {
+    "model": "SM-S908U1",
+    "firmware": "S908U1UES7EYA5",
+    "android_baseline": 14,
+    "bootloader_revision": 7
+  },
+  "last_generic_build": {
+    "product": "lineage_gsi_arm64-ap2a-userdebug",
+    "direct_exit": 1,
+    "ended_utc": "2026-11-12T03:09:45Z",
+    "last_observed_action": "136780/151184",
+    "failed_target": "obj/ETC/build-manifest_intermediates/build-manifest.xml",
+    "failure": "repo manifest tried to save/remove its Git-config JSON cache on a read-only filesystem",
+    "cache_path": "<BUILD_USER_HOME>/.repo_.gitconfig.json",
+    "completed_system_image_verified": false,
+    "output_inventory_reopened_at_closeout": false,
+    "log_sha256": "f8040b83e7eb399f3bc6c1099c144f88cc7b3bf2b61cc7e183d2174c3c727828",
+    "exit_file_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+  },
+  "wsl_distribution_states": {
+    "Ubuntu-24.04": "Stopped",
+    "SM-P550-Build": "Stopped"
+  },
+  "shutdown_or_kill_needed": false,
+  "new_build_started": false,
+  "machine_learning_model_trained_or_evaluated": false,
+  "owner_os_installed_or_booted": false,
+  "source_manifest_commit": "121f4ec5f11dc98ff2c427bc9d23165e914c54bb",
+  "resolved_manifest_sha256": "659341b8c3cafa8d05d60fc25762a662be1c0eb7155ff11e87d1550af83abd74"
+}
